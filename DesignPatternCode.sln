@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{190FACE3-F200-432A-BFA6-0E0E223D55EA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{D6CEAFFA-D8BF-417F-8369-581CB53E7CB9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{69EA7006-799A-416D-AFC6-8BE4641DC1C4}"
@@ -25,16 +23,6 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{190FACE3-F200-432A-BFA6-0E0E223D55EA}.Release|Win32.ActiveCfg = Release|Any CPU
 		{D6CEAFFA-D8BF-417F-8369-581CB53E7CB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6CEAFFA-D8BF-417F-8369-581CB53E7CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6CEAFFA-D8BF-417F-8369-581CB53E7CB9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
