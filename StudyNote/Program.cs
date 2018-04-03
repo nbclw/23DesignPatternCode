@@ -10,6 +10,7 @@ namespace StudyNote
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
