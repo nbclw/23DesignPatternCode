@@ -62,7 +62,8 @@
         {
             return new SportCar();
         }
-    }    public class JeepCarFactory : BaseCarFactory//具体类
+    }    
+	public class JeepCarFactory : BaseCarFactory//具体类
     {
         public override BaseCar Create()
         {

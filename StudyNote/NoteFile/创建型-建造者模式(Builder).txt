@@ -31,3 +31,69 @@
         继承抽象类或者接口的类，其具体实现可能会有剧烈的变化。
 
     建造者：
+	
+	1、首先是有一个相对稳定的组合算法Director，使用不同的 建造类 来建造房屋，实现方式由 建造类 实现，这里来决定建造顺序。
+	public class Director
+    {
+        public void Building(Builder builder)
+        {
+            builder.BuildWall();
+            builder.BuildDoor();
+            builder.BuildWindows();
+        }
+    }
+	2、同一对象的不同的 建造类
+	public class ChineseBuilder : Builder
+    {
+        House house = new ChineseHouse();
+        public override void BuildDoor()
+        {
+            house.Door = "中式门";
+        }
+        public override void BuildWall()
+        {
+            house.Wall = "中式墙";
+        }
+        public override void BuildWindows()
+        {
+            house.Windows = "中式窗户";
+        }
+
+        public override House GetHouse()
+        {
+            return house;
+        }
+    }
+
+	使用：
+	    static void Main(string[] args)
+        {
+            Director director = new Director();
+
+            Builder chBuilder = new ChineseBuilder();
+            Builder roBuilder = new RomanBuilder();
+
+            director.Building(chBuilder);
+            House chHouse = chBuilder.GetHouse();
+            Console.WriteLine(chHouse.Door);
+            Console.WriteLine(chHouse.Wall);
+            Console.WriteLine(chHouse.Windows);
+
+            Console.WriteLine("-------------------------");
+
+            director.Building(roBuilder);
+            House roHouse = roBuilder.GetHouse();
+            Console.WriteLine(roHouse.Door);
+            Console.WriteLine(roHouse.Wall);
+            Console.WriteLine(roHouse.Windows);
+
+            Console.WriteLine("-----------end-----------");
+            Console.ReadKey();
+        }
+
+	总结：
+	建造者模式与抽象工厂类似，有以下感悟：
+		1、建造类与工厂类类似，都是使用组合的方式来建造产品，建造类与工厂类及其相似
+		2、建造者建造的对象，与抽象工厂建造的对象集有类比倾向，若将 对象集 视为一个对象，则及其类似
+		3、建造者模式比抽象工厂模式多了一个组合算法Director类，该类使用 建造类 来进行创建对象，使用时，相当于抽象工厂模式新建一个工厂，在使用组合算法（稳定的）使用工厂类来创建对象
+		4、二者的关注点不一样

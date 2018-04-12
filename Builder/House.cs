@@ -33,10 +33,15 @@ namespace Builder
             set { _windows = value; }
         }
         #endregion
-        public abstract void BuildDoor();
-        public abstract void BuildWall();
-        public abstract void BuildWindows();
+    }
 
-        public abstract House GetHouse();
+    public class ChineseHouse : House
+    {
+
+    }
+
+    public class RomanHouse : House
+    {
+
     }
 }

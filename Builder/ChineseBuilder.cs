@@ -6,19 +6,25 @@ using System.Threading.Tasks;
 
 namespace Builder
 {
-    public class ChineseHouse : House
+    public class ChineseBuilder : Builder
     {
+        House house = new ChineseHouse();
         public override void BuildDoor()
         {
-            base.Door = "中式门";
+            house.Door = "中式门";
         }
         public override void BuildWall()
         {
-            base.Wall = "中式墙";
+            house.Wall = "中式墙";
         }
         public override void BuildWindows()
         {
-            base.Windows = "中式窗户";
+            house.Windows = "中式窗户";
+        }
+
+        public override House GetHouse()
+        {
+            return house;
         }
     }
 }
